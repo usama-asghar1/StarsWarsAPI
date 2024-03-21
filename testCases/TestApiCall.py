@@ -1,4 +1,5 @@
 import unittest
+import requests
 from classes.APIRetrieval import APIRetrieval
 
 
@@ -17,7 +18,7 @@ class MyTestCase(unittest.TestCase):
     def test_APIClass_has_peopleLink(self):
         self.assertTrue(hasattr(APIRetrieval, 'PeopleUrl'))
 
-    def test_API_class_has_method_To_get_all_star_shipInfo(self):
+    def test_API_class_has_method_To_get_all_people_info(self):
         self.assertTrue(hasattr(APIRetrieval, 'get_people_info'))
 
     def test_Get_all_people_info(self):
@@ -51,6 +52,5 @@ class MyTestCase(unittest.TestCase):
 
 
 if __name__ == '__main__':
-    print("Testing APIClass")
     unittest.main()
 
