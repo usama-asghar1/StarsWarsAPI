@@ -28,6 +28,17 @@ class MyTestCase(unittest.TestCase):
         api = APIRetrieval()
         people = api.get_starships_info()
         self.assertTrue(len(people) == 36)
+    def test_get_specific_starship_info(self):
+        api = APIRetrieval()
+        starship = api.get_specific_starship_info(9)
+        self.assertTrue(starship['name'] == "Death Star")
+        self.assertTrue(starship['model'] == "DS-1 Orbital Battle Station")
+
+    def test_get_specific_people_info(self):
+        api = APIRetrieval()
+        people = api.get_specific_people_info(1)
+        self.assertTrue(people['name'] == "Luke Skywalker")
+        self.assertTrue(people['height'] == "172")
 
 
 if __name__ == '__main__':
