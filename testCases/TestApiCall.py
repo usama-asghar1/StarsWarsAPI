@@ -24,7 +24,7 @@ class MyTestCase(unittest.TestCase):
     def test_Get_all_people_info(self):
         api = APIRetrieval()
         people = api.get_people_info()
-        self.assertTrue(len(people) == 82)
+        self.assertEqual(len(people), 82)
     def test_Get_all_starship_info(self):
         api = APIRetrieval()
         sharships = api.get_starships_info()
