@@ -1,9 +1,9 @@
 from unittest import main
-from data_transformation import MongoTransformation
+from classes.data_transformation import *
 
 
+MongoTransformation()
 
 
-
-# Run unit tests automaticallymain(module='test_module', exit=False)
-main(module='test_module', exit=False)
+# Run unit tests automatically
+main(module='data_transformation_test', exit=False)
