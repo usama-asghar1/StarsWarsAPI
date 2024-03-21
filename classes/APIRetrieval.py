@@ -49,11 +49,11 @@ class APIRetrieval:
         return self.get_resource_list(APIRetrieval.StarshipUrl)
 
     def get_specific_starship_info(self,starship_number):
-        starship_url = APIRetrieval.BaseUrl + APIRetrieval.StarshipUrl + starship_number
+        starship_url = APIRetrieval.BaseUrl + APIRetrieval.StarshipUrl + str(starship_number)
         return self.get_resource_info(starship_url)
 
     def get_specific_people_info(self, people_number):
-        people_url = APIRetrieval.BaseUrl + APIRetrieval.PeopleUrl + people_number
+        people_url = APIRetrieval.BaseUrl + APIRetrieval.PeopleUrl + str(people_number)
         return self.get_resource_info(people_url)
 
 
