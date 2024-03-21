@@ -38,10 +38,9 @@ class MyTestCase(unittest.TestCase):
         # Assert that the return value is a dictionary
         self.assertIsInstance(result, dict)
 
-
-
-
-
+    def test_get_obj_id_from_mongo_with_name(self):
+        result = get_id_from_name_in_DB("Luke Skywalker")
+        self.assertEqual(len(result), 1)
 
 
 
