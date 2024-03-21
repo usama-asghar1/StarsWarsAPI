@@ -51,4 +51,6 @@ class MyTestCase(unittest.TestCase):
 
 
 if __name__ == '__main__':
+    print("Testing APIClass")
     unittest.main()
+
