@@ -15,7 +15,7 @@ class MyTestCase(unittest.TestCase):
     def test_APIClass_has_baseLink(self):
         self.assertTrue(hasattr(APIRetrieval, 'BaseUrl'))
     def test_APIClass_has_peopleLink(self):
-        self.assertTrue(hasattr(APIRetrieval, 'BaseUrl'))
+        self.assertTrue(hasattr(APIRetrieval, 'PeopleUrl'))
 
     def test_API_class_has_method_To_get_all_star_shipInfo(self):
         self.assertTrue(hasattr(APIRetrieval, 'get_people_info'))
