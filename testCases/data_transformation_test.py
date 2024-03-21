@@ -8,7 +8,6 @@ class MyTestCase(unittest.TestCase):
         self.assertTrue(callable(MongoTransformation.__init__))  # Check if __init__ is callable (i.e., it's a method)
 
     def test_get_obj_id(self):
-
         self.assertEqual(True, False)
 
 
