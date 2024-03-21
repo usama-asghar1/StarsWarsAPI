@@ -1,0 +1,3 @@
+
+class MongoTransformation:
+    pass
