@@ -4,9 +4,57 @@ import requests
 
 class APIRetrieval:
 
-    baseUrl = "https://swapi.dev/api/"
+    BaseUrl = "https://swapi.dev/api/"
     PeopleUrl = "people/"
     StarshipUrl = "starships/"
+
+
+
+    def get_people_info(self):
+        all_people = []
+
+        try:
+            # Initial request to get the first page of people
+            response = requests.get(self.BaseUrl + self.PeopleUrl)
+            response.raise_for_status()  # Raise an error if response status is not successful
+            starships_data = response.json()
+            all_people.extend(starships_data['results'])
+
+            # Check if there are more pages of results
+            while starships_data['next']:
+                response = requests.get(starships_data['next'])
+                response.raise_for_status()  # Raise an error if response status is not successful
+                starships_data = response.json()
+                all_people.extend(starships_data['results'])
+
+            return all_people
+
+        except requests.exceptions.RequestException as e:
+            print("Error: Cannot connect to the API")
+            print(e)
+            return None
+
+    def get_specific_people_info(self, person_id):
+        try:
+            response = requests.get(self.BaseUrl + self.PeopleUrl + str(person_id))
+            if response.status_code == 200:
+                return response.json()
+            else:
+                print(f"Failed to retrieve data for person ID {person_id}.")
+                return response
+        except requests.exceptions.RequestException as e:
+            print("Error: Cannot connect to the API.")
+            return None
+
+        except requests.exceptions.RequestException as e:
+            print("Error: Cannot connect to the API")
+            print(e)
+            return None
+
+
+
+
+
 
 
     #def findPerson(self,IDnumber):
@@ -50,7 +98,7 @@ class APIRetrieval:
             except requests.exceptions.HTTPError as e:
                 print("HTTP Error: ", e)
 
-base_url_result = APIRetrieval()
-print(base_url_result.BaseUrl("people"))
-resource_content = APIRetrieval()
-print(resource_content.get_starships_info("https://swapi.dev/api/people/3/"))
+# base_url_result = APIRetrieval()
+# print(base_url_result.BaseUrl("people"))
+# resource_content = APIRetrieval()
+# print(resource_content.get_starships_info("https://swapi.dev/api/people/3/"))
