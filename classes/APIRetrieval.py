@@ -48,7 +48,7 @@ class APIRetrieval:
 
     def get_starships_info(self):
          return self.get_resource_list(APIRetrieval.StarshipUrl)
-    #
+
     def get_specific_starship_info(self,starship_number):
          starship_url = APIRetrieval.BaseUrl + APIRetrieval.StarshipUrl + str(starship_number)
          return self.get_resource_info(starship_url)
@@ -57,4 +57,6 @@ class APIRetrieval:
          people_url = APIRetrieval.BaseUrl + APIRetrieval.PeopleUrl + str(people_number)
          return self.get_resource_info(people_url)
 
+    def get_people_info(self):
+         return self.get_resource_list(APIRetrieval.PeopleUrl)
 
