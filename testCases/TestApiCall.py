@@ -40,6 +40,15 @@ class MyTestCase(unittest.TestCase):
         self.assertTrue(people['name'] == "Luke Skywalker")
         self.assertTrue(people['height'] == "172")
 
+    def test_fail_to_get_specific_people_info(self):
+        api = APIRetrieval()
+        people = api.get_specific_people_info(100)
+        self.assertTrue(people.status_code == 404)
+    def test_fail_to_get_specific_starship_info(self):
+        api = APIRetrieval()
+        people = api.get_specific_starship_info(100)
+        self.assertTrue(people.status_code == 404)
+
 
 if __name__ == '__main__':
     unittest.main()
