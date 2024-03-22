@@ -5,9 +5,8 @@ db = client['starwars']
 
 
 class MongoTransformation:
-    def __init__(self, starship_data, name_of_pilot, client, db):
-        self.starship_data = starship_data
-        self.name_of_pilot = name_of_pilot
+    def __init__(self, client =pymongo.MongoClient() , db=client['starwars']):
+
         self.client = client
         self.db = db
 

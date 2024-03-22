@@ -8,6 +8,11 @@ class APIRetrieval:
     PeopleUrl = "people/"
     StarshipUrl = "starships/"
 
+    def Get_Json_from_full_URL(self,URL):
+        response = requests.get(URL)
+        JsonData = response.json()
+        return JsonData
+
     def get_resource_list(self,resource_name:str):
         if resource_name is None:
             return None
