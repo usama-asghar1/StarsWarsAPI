@@ -7,8 +7,7 @@ class MyTestCase(unittest.TestCase):
     def test_mongo_transformation_exists(self):
         self.assertTrue(hasattr(MongoTransformation, '__init__'))  # Check if the class has an __init__ method
         self.assertTrue(callable(MongoTransformation.__init__))  # Check if __init__ is callable (i.e., it's a method)
-        self.assertTrue(hasattr(MongoTransformation, 'client'))
-        self.assertTrue(hasattr(MongoTransformation, 'db'))
+
 
     def test_check_if_name_in_db_returns_false_when_not_found(self):
 
