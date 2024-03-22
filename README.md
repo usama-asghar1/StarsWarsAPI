@@ -19,7 +19,7 @@ https://trello.com/b/GJBdRjhD/room-2-project
 The overall structure of the project was to use object-oriented classes, to be built using test-driven development.
 
 
-The *swapi*, the Star Wars API! is the world's first quantified and programmatically-accessible data source for all the data from the Star Wars canon universe! This project provides the valuable insights for the starwars based on the content being added to the MongoDB for starship details and by creating the reference between character details and starship details.
+The [*swapi*](https://swapi.dev/), the Star Wars API! is the world's first quantified and programmatically-accessible data source for all the data from the Star Wars canon universe! This project provides the valuable insights for the starwars based on the content being added to the MongoDB for starship details and by creating the reference between character details and starship details.
 1. Access the *swapi* in order to understand what content is available.
 2. Create the collection *starships* on MongoDB compass.
 3. Feed into database collection, creating the reference between the characters and starship through the pilot id. 
