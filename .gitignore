@@ -11,8 +11,9 @@ pip-delete-this-directory.txt
 nosetests.xml
 coverage.xml
 .ipynb_checkpoints
-.idea/
 .env
+.idea*
+.env*
 venv/
 ENV/
 
