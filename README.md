@@ -1,4 +1,4 @@
-# Starships
+# Starships - SWAPI
 
 ![X-Wing](https://www.denofgeek.com/wp-content/uploads/2019/12/x-wing.jpg?w=1024)
 ### Project Goal
